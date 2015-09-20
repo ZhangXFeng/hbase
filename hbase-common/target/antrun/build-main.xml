@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <replace token="@@@VERSION@@@" file="D:\hbase-1.0.1-src\hbase-1.0.1\hbase-common\target\classes/hbase-default.xml" value="1.0.1"/>
+  <mkdir dir="D:\hbase-1.0.1-src\hbase-1.0.1\hbase-common\target/nativelib"/>
+  <exec dir="D:\hbase-1.0.1-src\hbase-1.0.1\hbase-common\target/nativelib" executable="tar" failonerror="false">
+    <arg value="xf"/>
+    <arg value="hadoop-snappy-nativelibs.tar"/>
+  </exec>
+</target>
+</project>
